@@ -1,46 +1,41 @@
 #include <iostream>
-#include<stack>
-
+#include "electrodomestico.h"
+#include"cocina.h"
 using namespace std;
 
-void  cargar(stack<int> &p1){
-    char resp;
-    int valor;
-    do{
-        cout<<"ingrese un valor"<<endl;
-        cin>>valor;
-        p1.push(valor);
-        cout<<"desea ingresar otro valor"<<endl;
-        cin>>resp;
-    }while(resp=='s');
-}
-
-int comparar_pila(stack<int>p1,stack <int>p2){
-    int numero1,numero2;
-
-    while(!p1.empty() || !p2.empty()){
-    numero1=p1.top();
-    numero2=p2.top();
-    if (numero1 < numero2){
-        return -1;
-        cout<<"entro 1";
-    }else if(numero1 > numero2){
-        return 1;
-        cout<<"entro";
-    }
-    p1.pop();
-    p2.pop();
-}
-return 0;
-}
 int main()
 {
-    stack<int> p1,p2;
-    int valor;
-    cout <<"cargando pila 1:"<<endl;
-    cargar(p1);
-    cout<<"cargando pila 2:"<<endl;
-    cargar(p2);
-    cout<<"el valor es :"<<comparar_pila(p1,p2);
+    /*
+   float peso;
+   float precio;
+   char consumo;
+   string color;
+//aqui se ingresa los datos con el que se crean los objetos
+    cout<<"ingrese el peso :";
+    cin>>peso;
+    cout<<"ingrese color :";
+    cin>>color;
+    cout<<"ingrese consumo energetico :";
+    cin>>consumo;
+    cout<<"ingrese precio :";
+    cin>>precio;
+    electrodomestico elec1(precio,color,consumo,peso);//se crea un objeto del tipo electrodomesticos
+    electrodomestico elec2(12);//se cre un objeto del tipo electrodomesticos con los valores por defecto excepto el precio qu es 12
+    cout<<"peso :"<<elec1.getter_peso()<<endl;
+    cout<<"color :"<<elec1.getter_color()<<endl;
+    cout<<" consumo energetico :"<<elec1.getter_consumo_energetico()<<endl;
+    cout<<"precio :"<<elec1.getter_precio()<<endl;
+    cout<<"peso :"<<elec2.getter_peso()<<endl;
+    cout<<"color :"<<elec2.getter_color()<<endl;
+    cout<<"energetico :"<<elec2.getter_consumo_energetico()<<endl;
+    cout<<"precio :"<<elec2.getter_precio()<<endl;
+    */
+
+    cocina coc1();
+    cocina coc(10,"verde");
+    electrodomestico *p=&coc;
+    cout<<"alto :"<<coc.getter_alto();
+    cout<<"color :"<<p->getter_color();
     return 0;
+
 }
