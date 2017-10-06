@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    /*
+
    float peso;
    float precio;
    char consumo;
@@ -29,7 +29,7 @@ int main()
     cout<<"color :"<<elec2.getter_color()<<endl;
     cout<<"energetico :"<<elec2.getter_consumo_energetico()<<endl;
     cout<<"precio :"<<elec2.getter_precio()<<endl;
-    */
+
 
     cocina coc1();
     cocina coc(10,"verde");
